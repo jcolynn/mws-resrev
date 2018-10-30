@@ -6,6 +6,7 @@ body,td,th,p{
 	font-size: 10pt;
 	color: #333;
   line-height: 1.5;
+  width: 100%;
 }
 body {
 	background-color: #fdfdfd;
@@ -19,7 +20,7 @@ ul, li {
 	color: #333;
 }
 a {
-	color: orange;
+	color: rgb(63, 184, 129);
 	text-decoration: none;
 }
 a:hover, a:focus {
@@ -188,6 +189,11 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+#restaurants-list li a:hover, a:focus {
+	color: #3397db;
+	text-decoration: none;
+}
+
 /* ====================== Restaurant Details ====================== */
 .inside header {
   position: fixed;
@@ -287,4 +293,29 @@ nav h1 a {
 		margin-right: auto;
 		margin-left: auto;
 	}
+}
+/*@ 757px the rows go from one restaurant to two switch the single restaurant to a larger size to fill space*/
+@media screen and (max-width: 757px) {
+  :root {
+    width: 100%;
+  }
+  #restaurants-list li {
+    width: 90%;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* @579px adjust filter options box to fit the contents better and set min-width*/
+@media screen and (max-width: 579px) {
+  body {
+    min-width: 320px;
+  }
+  .filter-options {
+    display: flex;
+    flex-direction: column;
+  }
+  .filter-options h2 {
+    margin-top: 10px;
+  }
 }
